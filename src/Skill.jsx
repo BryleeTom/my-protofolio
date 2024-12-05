@@ -1,4 +1,4 @@
-import Header from './Header';
+import Header from './Header'; 
 import css from './assets/Language/css/css.svg';
 import html from './assets/Language/html/html.svg';
 import js from './assets/Language/js/js.svg';
@@ -12,18 +12,6 @@ import { IoClose } from 'react-icons/io5';
 import { useState } from 'react';
 
 function Skill() {
-    const [hoverState, setHoverState] = useState({
-        html: false,
-        css: false,
-        js: false,
-        reactjs: false,
-        nodejs: false,
-        python: false,
-        pygame: false,
-        kivy: false,
-        kivymd: false
-    });
-
     const [selectedSkill, setSelectedSkill] = useState(null);
 
     const skillInfo = {
@@ -36,13 +24,6 @@ function Skill() {
         pygame: "Pygame is a set of Python modules designed for writing video games.",
         kivy: "Kivy is an open-source Python library for developing multitouch applications, including games and apps for mobile devices.",
         kivymd: "KivyMD is a collection of Material Design components for use with Kivy, for more modern UI designs."
-    };
-
-    const handleHover = (skill) => {
-        setHoverState((prevState) => ({
-            ...prevState,
-            [skill]: !prevState[skill]
-        }));
     };
 
     const handleImageClick = (skill) => {
@@ -63,12 +44,9 @@ function Skill() {
                             <img
                                 src={html}
                                 alt="HTML"
-                                className={`item ${hoverState.html ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('html')}
-                                onMouseLeave={() => handleHover('html')}
+                                className="item"
                                 onClick={() => handleImageClick('html')}
                             />
-                            {hoverState.html && <span className="image-title">HTML</span>}
                         </div>
                         <div className="vertical-line"></div>
 
@@ -76,12 +54,9 @@ function Skill() {
                             <img
                                 src={css}
                                 alt="CSS"
-                                className={`item ${hoverState.css ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('css')}
-                                onMouseLeave={() => handleHover('css')}
+                                className="item"
                                 onClick={() => handleImageClick('css')}
                             />
-                            {hoverState.css && <span className="image-title">CSS</span>}
                         </div>
                         <div className="vertical-line"></div>
 
@@ -89,12 +64,9 @@ function Skill() {
                             <img
                                 src={js}
                                 alt="JavaScript"
-                                className={`item ${hoverState.js ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('js')}
-                                onMouseLeave={() => handleHover('js')}
+                                className="item"
                                 onClick={() => handleImageClick('js')}
                             />
-                            {hoverState.js && <span className="image-title">JavaScript</span>}
                         </div>
                     </div>
 
@@ -105,12 +77,9 @@ function Skill() {
                             <img
                                 src={reactjs}
                                 alt="ReactJS"
-                                className={`item ${hoverState.reactjs ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('reactjs')}
-                                onMouseLeave={() => handleHover('reactjs')}
+                                className="item"
                                 onClick={() => handleImageClick('reactjs')}
                             />
-                            {hoverState.reactjs && <span className="image-title">ReactJS</span>}
                         </div>
                         <div className="vertical-line"></div>
 
@@ -118,12 +87,9 @@ function Skill() {
                             <img
                                 src={nodejs}
                                 alt="NodeJS"
-                                className={`item ${hoverState.nodejs ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('nodejs')}
-                                onMouseLeave={() => handleHover('nodejs')}
+                                className="item"
                                 onClick={() => handleImageClick('nodejs')}
                             />
-                            {hoverState.nodejs && <span className="image-title">NodeJS</span>}
                         </div>
                         <div className="vertical-line"></div>
 
@@ -131,12 +97,9 @@ function Skill() {
                             <img
                                 src={python}
                                 alt="Python"
-                                className={`item ${hoverState.python ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('python')}
-                                onMouseLeave={() => handleHover('python')}
+                                className="item"
                                 onClick={() => handleImageClick('python')}
                             />
-                            {hoverState.python && <span className="image-title">Python</span>}
                         </div>
                     </div>
 
@@ -147,12 +110,9 @@ function Skill() {
                             <img
                                 src={pygame}
                                 alt="Pygame"
-                                className={`item ${hoverState.pygame ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('pygame')}
-                                onMouseLeave={() => handleHover('pygame')}
+                                className="item"
                                 onClick={() => handleImageClick('pygame')}
                             />
-                            {hoverState.pygame && <span className="image-title">Pygame</span>}
                         </div>
                         <div className="vertical-line"></div>
 
@@ -160,12 +120,9 @@ function Skill() {
                             <img
                                 src={kivy}
                                 alt="Kivy"
-                                className={`item ${hoverState.kivy ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('kivy')}
-                                onMouseLeave={() => handleHover('kivy')}
+                                className="item"
                                 onClick={() => handleImageClick('kivy')}
                             />
-                            {hoverState.kivy && <span className="image-title">Kivy</span>}
                         </div>
                         <div className="vertical-line"></div>
 
@@ -173,12 +130,9 @@ function Skill() {
                             <img
                                 src={kivymd}
                                 alt="Kivymd"
-                                className={`item ${hoverState.kivymd ? "hovered" : ""}`}
-                                onMouseEnter={() => handleHover('kivymd')}
-                                onMouseLeave={() => handleHover('kivymd')}
+                                className="item"
                                 onClick={() => handleImageClick('kivymd')}
                             />
-                            {hoverState.kivymd && <span className="image-title">Kivymd</span>}
                         </div>
                     </div>
                 </div>
